@@ -57,7 +57,7 @@ const Users = () => {
       ? users.filter((user) => user.profession._id === selectedProf._id)
       : search
       ? users.filter((user) =>
-          user.name.toLowerCase().includes(search.toLowerCase())
+          user.name.toLowerCase().includes(search.trim().toLowerCase())
         )
       : users;
     const count = filteredUsers.length;
